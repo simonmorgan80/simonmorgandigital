@@ -2,7 +2,7 @@ export default function ContactCard() {
 
     return (
         <article className="bg-slate-50 hover:bg-slate-100 ease-in-out mb-4 p-4 xl:mb-8 xl:p-8 w-full">
-            <p className="text-xl">Please get in touch for more information or if you'd like to discuss upcoming projects you need support with.</p>
+            <p className="text-xl">Please get in touch for more information or if you&apos;d like to discuss upcoming projects you need support with.</p>
             <ul className="mt-8">
                 <li className="mb-4">
                     <a href="https://www.linkedin.com/in/simon-morgan-5b842414/" className="flex flex-row gap-2 items-center  underline-offset-4 hover:underline" rel="noopener noreferrer">
