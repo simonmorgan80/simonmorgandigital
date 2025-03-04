@@ -30,6 +30,12 @@ body {
   text-underline-offset: 4px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .prose a {
+    color: #fff
+  }
+}
+
 .prose a:hover {
   text-decoration: none;
 }

@@ -11,7 +11,7 @@ type ProjectProps = {
 export default function Project( { project } : { project : ProjectProps } ) {
 
     return (
-        <article className="bg-slate-50 hover:bg-slate-100 ease-in-out mb-4 p-4 xl:mb-8 xl:p-8">
+        <article className="bg-slate-50 dark:bg-gray-800 ease-in-out mb-4 p-4 xl:mb-8 xl:p-8">
 
             {!project.url ? 
                 <h2 className="text-xl font-medium" dangerouslySetInnerHTML={createMarkup(project.name)}></h2> : 
@@ -29,7 +29,7 @@ export default function Project( { project } : { project : ProjectProps } ) {
                     {project.subprojects.map((link, index) => {
                         return (
                             <li key={index} className="mb-1">
-                                <a href={link} target="_blank" className="text-blue-600 underline-offset-4 hover:underline">{link}</a>
+                                <a href={link} target="_blank" className="text-blue-600 dark:text-white underline-offset-4 hover:underline">{link}</a>
                             </li>
                         )
                     })}
