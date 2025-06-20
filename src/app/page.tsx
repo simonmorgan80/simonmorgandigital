@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="">
       <Hero title="Website Development">
-        <p>Available for contracts starting Feb 2025</p>
+        <p>Available for contracts starting June 2025</p>
       </Hero>
 
       <div className="container mx-auto py-10 px-4">
