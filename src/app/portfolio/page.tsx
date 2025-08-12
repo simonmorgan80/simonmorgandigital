@@ -56,7 +56,10 @@ const projects = [
         name: 'rafaelvalls.co.uk',
         url: 'https://www.rafaelvalls.co.uk/',
         content: '<p>Custom Wordpress build for Art Gallery using Advanced Custom Fields,  HTML, CSS, Javascript, Webpack & Gulp</p>',
-        date: 'May 2020'
+        date: 'May 2020',
+        subprojects: [
+            'https://www.rafaelvalls.co.uk/'
+        ]
     },    
     {
         name: 'living-group.com',
