@@ -22,7 +22,7 @@ export default function Project( { project } : { project : ProjectProps } ) {
 
             {project.date ? <div className="text-sm" dangerouslySetInnerHTML={createMarkup(project.date)} ></div> : null}
 
-            <div className="prose mb-2 mt-4" dangerouslySetInnerHTML={createMarkup(project.content)} />
+            {project.content ? <div className="prose mb-2 mt-4" dangerouslySetInnerHTML={createMarkup(project.content)} /> : null }
 
             {project.subprojects && 
                 <ul>

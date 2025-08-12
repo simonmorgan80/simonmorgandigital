@@ -4,10 +4,19 @@ import ContactCard from '@/app/ui/contact-card';
 
 const projects = [
     {
+        name: 'VIPA Digital',
+        url: 'https://vipadigital.com',
+        date: 'June 2025 - July 2025',
+        content: '<p>Working directly with client to redevelop website based on updated brand/redesign.  Moved to Wordpress CMS built using ACF blocks and <a href="https://vite.dev/" target="_blank">Vite</a> Front end tooling</p>',
+        subprojects: [
+            'https://vipadigital.com'
+        ]
+    },
+    {
         name: 'Bladonmore',
         url: '',
         content: '<p>Contract working for <a href="https://www.bladonmore.com" target="_blank" rel="noreferrer noopener">Bladonmore.com</a></p><p>Development of custom Wordpress builds using Advanced Custom Fields,  HTML, CSS, Javascript, Webpack & Gulp</p>',
-        date: 'Oct 2022 - Jan 2025 <br>June 2021 - Jan 2022',
+        date: 'Oct 2022 - June 2025 <br>June 2021 - Jan 2022',
         subprojects: [
             'https://www.ritcap.com/',
             'https://www.arapartners.com/',
