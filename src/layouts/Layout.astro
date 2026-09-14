@@ -1,0 +1,97 @@
+---
+import '../styles/global.css';
+
+interface Props {
+    title: string;
+    description?: string;
+}
+const { title, description } = Astro.props;
+const pathname = Astro.url.pathname;
+const currentPath = pathname.replace(/\//g, '');
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://simonmorgandigital.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SM Digital" />
+
+        <meta property="og:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="47f474e0-5f73-4d6b-afec-9049d4664300"></script>
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'ProfessionalService',
+                name: 'Simon Morgan Digital',
+                alternateName: 'SM Digital',
+                url: 'https://simonmorgandigital.com',
+                description:
+                    'Freelance/contract front end web developer specialising in fast, accessible, responsive websites using Astro, WordPress, Sanity CMS and design systems.',
+                areaServed: {
+                    '@type': 'Country',
+                    name: 'United Kingdom',
+                },
+                address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'London',
+                    addressCountry: 'GB',
+                },
+                founder: {
+                    '@type': 'Person',
+                    name: 'Simon Morgan',
+                    jobTitle: 'Front End Web Developer',
+                    url: 'https://simonmorgandigital.com/about',
+                    sameAs: ['https://www.linkedin.com/in/simon-morgan-5b842414'],
+                },
+                sameAs: ['https://www.linkedin.com/in/simon-morgan-5b842414'],
+            })}
+        />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header__inner">
+                    <p class="h1 logo">
+                        <a href="/" class="logo__link">SMDigital</a>
+                    </p>
+                    <nav class="nav">
+                        {}
+                        <ul class="nav__menu">
+                            <li class="nav__item">
+                                <a href="/" class:list={['nav__link', { 'is-active': currentPath === '' }]}>Home</a>
+                            </li>
+                            <li>
+                                <a href="/portfolio" class:list={['nav__link', { 'is-active': currentPath === 'portfolio' }]}>Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="/#services" class="nav__link">Services</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class:list={['nav__link', { 'is-active': currentPath === 'contact' }]}>Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <slot />
+        </main>
+        <footer class="site-footer">
+            <div class="container text-sm">
+                &copy; 2025 &nbsp;|&nbsp; <a href="/">Simon Morgan Digital Ltd</a>
+                &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/simon-morgan-5b842414" target="_blank" rel="noreferrer">Linkedin</a>
+            </div>
+        </footer>
+    </body>
+</html>

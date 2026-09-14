@@ -1,0 +1,37 @@
+.button {
+    appearance: none;
+    background-color: var(--color-blue);
+    border: 0;
+    border-radius: 0.25rem;
+    color: var(--color-white);
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    letter-spacing: 1px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    user-select: none;
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
+.button--secondary:is(:hover, :focus) {
+    background-color: var(--color-white);
+    color: var(--color-grey-dark);
+}
+
+.button--tertiary {
+    background-color: transparent;
+    border: 1px solid var(--color-grey-dark);
+    color: var(--color-grey-dark);
+}
+
+.button--tertiary:is(:hover, :focus) {
+    background-color: var(--color-grey-dark);
+    color: var(--color-white);
+    /* text-decoration: underline; */
+}

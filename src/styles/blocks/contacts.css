@@ -1,0 +1,14 @@
+.contact-list {
+    padding-left: 0;
+}
+
+.contact-list__item {
+    margin-bottom: 0;
+}
+
+.contact-list__link {
+    align-items: center;
+    display: flex;
+    color: inherit;
+    gap: 0.25rem;
+}

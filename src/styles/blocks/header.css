@@ -1,0 +1,34 @@
+.site-header {
+    padding-block: var(--space-3);
+}
+
+.site-header__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+@media screen and (min-width: 48em) {
+    .site-header {
+        padding-block: var(--space-2);
+    }
+
+    .site-header__inner {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    display: flex;
+    font-weight: 300;
+    justify-content: center;
+    letter-spacing: 0.125rem;
+    margin: 0;
+}
+
+.logo__link {
+    color: inherit;
+    text-decoration: none;
+}

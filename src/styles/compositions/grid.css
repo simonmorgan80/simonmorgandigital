@@ -1,0 +1,46 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0 var(--grid-gap);
+}
+
+.grid--compact {
+    gap: 0 var(--grid-gap);
+}
+
+.grid-item {
+    --colspan: 12;
+    grid-column: auto / span var(--colspan);
+}
+
+[class*='grid-item--start-'] {
+    grid-column-start: var(--start);
+    grid-row-start: 1;
+}
+
+@media screen and (min-width: 64em) {
+    .grid-item--4 {
+        --colspan: 4;
+    }
+
+    .grid-item--6 {
+        --colspan: 6;
+    }
+
+    .grid-item--8 {
+        --colspan: 8;
+    }
+
+    .grid-item--10 {
+        --colspan: 10;
+    }
+
+    .grid-item--start-1 {
+        --start: 1;
+    }
+
+    .grid-item--start-6 {
+        --start: 6;
+    }
+}

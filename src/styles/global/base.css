@@ -1,0 +1,44 @@
+@view-transition {
+    navigation: auto;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-grey-light);
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
+    line-height: var(--leading-base);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Colors */
+
+.bg-blue {
+    background-color: var(--color-blue);
+}
+
+.bg-blue-dark {
+    background-color: var(--color-blue-dark);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-blue-dark {
+    color: var(--color-blue-dark);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
